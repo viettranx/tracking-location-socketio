@@ -3,7 +3,8 @@ Broadcast/Tracking location for socketIO
 
 ## Installation
 
-You must have node installed: [Install NodeJS](https://nodejs.org/en/download/)
+You must have node installed: [Install NodeJS](https://nodejs.org/en/download/).
+
 Clone repository and change directory to it
 
 ``` 
@@ -28,6 +29,7 @@ nodemon Server.js
 ```
 
 In case use need to run it as background service. Install forever and run with this:
+
 ```
 npm install -g forever
 forever start -c nodemon Server.js
@@ -55,12 +57,13 @@ Since the nodemon service could not be watch itself config, you need to restart 
 This project use GPX format to emit location info to the clients. Just place any file GPX to add more. To create a GPX file, please follow the instruction at https://mapstogpx.com
 
 ## To Do
-[X] Parse XML content from GPX file.
-[X] Use SocketIO to emit to client
-[X] Client demo with website.
-[ ] Client demo with React Native.
-[ ] Client demo with iOS Native: Swift
-[ ] Client demo with Android Native: Kotlin
+
+- [X] Parse XML content from GPX file.
+- [X] Use SocketIO to emit to client
+- [X] Client demo with website.
+- [ ] Client demo with React Native.
+- [ ] Client demo with iOS Native: Swift
+- [ ] Client demo with Android Native: Kotlin
 
 ## Liccense
 Feel free to use and pull request to contribute it as you want.
