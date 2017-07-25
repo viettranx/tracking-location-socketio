@@ -72,8 +72,8 @@ const run = io => {
 
         // Transfer xmlNode object to plain object { lat : ..., lng: ...}
         const routeNodes = $('trkpt').map( (i, node) => ({
-          lat : parseFloat($(node).attr('lat')),
-          lng : parseFloat($(node).attr('lon'))
+          lat : Number($(node).attr('lat')),
+          lng : Number($(node).attr('lon'))
         })).get();
 
         // Emit route to client
