@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Marker animations with <code>setTimeout()</code></title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/static/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+        var markers = {};
+        var map;
+        var socket;
+
+        function initMap() {
+        
+            URL = window.location.href;
+            socket = io.connect(URL);
+
+            socket.on("connect", function() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 14,
+                    center: {lat: 10.777829, lng: 106.681630}
+                });
+            });
+
+            socket.on("disconnect", function() {
+                alert('You have been disconnected from server.');
+            });
+
+            socket.on("locationUpdated", function(locationState){
+                for (var k in locationState) {
+                    newMarker(k, locationState[k]);
+                }
+            });
+        }
+
+        function newMarker(k, location) {
+            if (markers[k] == null) {
+                markers[k] = new google.maps.Marker({
+                    position : location,
+                    map: map,
+                    icon: {
+                        url: '/static/truck.png',
+                        size: new google.maps.Size(100, 100),
+                        scaledSize: new google.maps.Size(50, 50),
+                        origin: new google.maps.Point(0.5,0.5)
+                    } 
+                });
+            } else {
+                markers[k].setPosition(location);
+            }
+            
+        }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw_Uh8npqpbpwW0JS1G7X1sSSpZ1AVGAI&callback=initMap">
+    </script>
+  </body>
+</html>

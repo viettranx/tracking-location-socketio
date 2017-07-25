@@ -1,0 +1,19 @@
+{
+  "name": "demo-track-location",
+  "version": "1.0.0",
+  "description": "Demo realtime track location for vehicles/cars on Map",
+  "main": "server.js",
+  "scripts": {
+    "babel-node": "babel-node --presets=/*a*/ --ignore='foo|bar|baz'"
+  },
+  "author": "Viettx",
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.15.2",
+    "multer": "^1.3.0",
+    "socket.io": "^2.0.1"
+  }
+}
