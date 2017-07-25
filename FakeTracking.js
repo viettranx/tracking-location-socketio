@@ -71,7 +71,7 @@ const run = io => {
         });
 
         // Transfer xmlNode object to plain object { lat : ..., lng: ...}
-        const routeNodes = $('trkpt').map( (i, node) => ({
+        const routeNodes = $('wpt').map( (i, node) => ({
           lat : Number($(node).attr('lat')),
           lng : Number($(node).attr('lon'))
         })).get();
