@@ -17,7 +17,6 @@
       }
     </style>
     <script src="/socket.io/socket.io.js"></script>
-    <script src="/static/jquery.min.js"></script>
   </head>
   <body>
     <div id="map"></div>
@@ -59,7 +58,9 @@
                         url: '/static/truck.png',
                         size: new google.maps.Size(100, 100),
                         scaledSize: new google.maps.Size(50, 50),
-                        origin: new google.maps.Point(0.5,0.5)
+                        origin: new google.maps.Point(0, 0),
+                        anchor: new google.maps.Point(25, 25),
+                        optimized: false
                     } 
                 });
             } else {
