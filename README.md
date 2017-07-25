@@ -1,6 +1,8 @@
 # tracking-location-socketio
 Broadcast/Tracking location for socketIO
 
+### [Live Demo](http://trackinglocation.skylab.vn)
+
 ## Installation
 
 You must have node installed: [Install NodeJS](https://nodejs.org/en/download/).
@@ -54,7 +56,7 @@ You can find default config in `nodemon.json`. That just simple:
 Since the nodemon service could not be watch itself config, you need to restart it.
 
 ## Want to add more route
-This project use GPX format to emit location info to the clients. Just place any file GPX to add more. To create a GPX file, please follow the instruction at https://mapstogpx.com
+This project use GPX format to emit location info to the clients. Just place any file GPX to `gpx` folder to add more. To create a GPX file, please follow the instruction at https://mapstogpx.com
 
 ## To Do
 
