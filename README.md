@@ -14,7 +14,7 @@ Clone repository and change directory to it
 
 ``` 
 git clone https://github.com/viettranx/tracking-location-socketio.git 
-cd tracking-location-socketio
+cd tracking-location-socketio/server
 ```
 
 Install nodemon
@@ -73,7 +73,7 @@ You need react-native installed: [React Native](https://facebook.github.io/react
 Follow these step to run the project:
 
 ```
-cd react-native
+cd client/react-native
 npm install
 react-native link
 react-native run-android
@@ -82,7 +82,7 @@ react-native run-android
 As on iOS
 
 ```
-cd ios
+cd client/react-native/ios
 pod install
 cd ..
 react-native run-ios
@@ -95,13 +95,22 @@ Please note that socket.io in `App.js` points to `localhost:4333`. Modify it in 
 const socketURL = 'http://localhost:4333'
 ```
 
+## Run iOS Swift
+
+```
+cd client/native-ios-swift/DemoTrackingLocation
+pod install
+
+open DemoTrackingLocation.xcworkspace
+```
+
 ## To Do
 
 - [X] Parse XML content from GPX file.
 - [X] Use SocketIO to emit to client
 - [X] Client demo with website.
 - [X] Client demo with React Native.
-- [ ] Client demo with iOS Native: Swift
+- [X] Client demo with iOS Native: Swift
 - [ ] Client demo with Android Native: Kotlin
 
 ## License
