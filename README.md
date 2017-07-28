@@ -59,7 +59,13 @@ You can find default config in `nodemon.json`. That just simple:
 Since the nodemon service could not be watch itself config, you need to restart it.
 
 ## Want to add more route
-This project use GPX format to emit location info to the clients. Just place any file GPX to `gpx` folder to add more. To create a GPX file, please follow the instruction at https://mapstogpx.com
+This project use GPX format to emit location info to the clients. Just place any file GPX to `gpx` folder to add more. To create a GPX file, you can use Google Maps Direction service and export it with a shorten URL:
+
+![](https://www.dropbox.com/s/9uf87hwnc3faoof/mapsDirection.png?raw=1)
+
+Then paste the URL to https://mapstogpx.com/pokemon.php to generate GPX file
+
+![](https://www.dropbox.com/s/xfe6b44ccblo64k/mapstopgx.png?raw=1)
 
 ## Run React Native
 You need react-native installed: [React Native](https://facebook.github.io/react-native/docs/getting-started.html)
