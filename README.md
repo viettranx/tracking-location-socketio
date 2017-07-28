@@ -1,7 +1,7 @@
 # tracking-location-socketio
 This project help us show a demo app view all vehicles moving on the maps. It's useful to make a prototype app like Uber/Grab.
 
-It's not real tracking GPS. I use GPX files exported from Google Direction service to make a fake tracking engine and socketIO emits data to the clients. Hope you enjoy it :D
+It's not real tracking GPS. I use GPX files exported from Google Direction service to make a fake tracking engine and socketIO to emit data to the clients. Hope you enjoy it :D
 
 ### [Live Demo for Website](http://trackinglocation.skylab.vn)
 
