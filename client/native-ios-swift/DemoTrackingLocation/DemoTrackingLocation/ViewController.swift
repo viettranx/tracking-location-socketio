@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var mapView: GMSMapView!
     
     let socket = SocketIOClient(
-        socketURL: URL(string: "http://trackinglocation.skylab.vn")!,
+        //socketURL: URL(string: "http://trackinglocation.skylab.vn")!,
+        socketURL: URL(string: "http://localhost:4333")!,
         config: [ .forceWebsockets(true) , .compress]
     )
     
