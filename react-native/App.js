@@ -7,8 +7,10 @@ import {
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 import io from 'socket.io-client';
 
-const socketURL = 'http://trackinglocation.skylab.vn'
+// const socketURL = 'http://trackinglocation.skylab.vn'
+const socketURL = 'http://localhost:4333'
 
+// Ingnore warning timer on Android simulator
 console.ignoredYellowBox = ['Setting a timer'];
 
 export default class tracking_location extends Component {
