@@ -70,9 +70,18 @@ Follow these step to run the project:
 cd react-native
 npm install
 react-native link
-react-native run-ios
 react-native run-android
 ```
+
+As on iOS
+
+```
+cd ios
+pod install
+cd ..
+react-native run-ios
+```
+
 
 Please note that socket.io in `App.js` points to `localhost:4333`. Modify it in case you need to change your server URL.
 
