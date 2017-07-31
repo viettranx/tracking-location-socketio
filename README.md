@@ -106,6 +106,10 @@ pod install
 open DemoTrackingLocation.xcworkspace
 ```
 
+## Run Android Kotlin
+
+Open client/native-android-kotlin with your Android Studio (>= v.3). Hit `Run button` and choose your simulator.
+
 ## To Do
 
 - [X] Parse XML content from GPX file.
@@ -113,7 +117,7 @@ open DemoTrackingLocation.xcworkspace
 - [X] Client demo with website.
 - [X] Client demo with React Native.
 - [X] Client demo with iOS Native: Swift
-- [ ] Client demo with Android Native: Kotlin
+- [X] Client demo with Android Native: Kotlin
 
 ## License
 Feel free to use and pull request to contribute it as you want.
